@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M24,0C10.75,0 0,10.75 0,24s10.75,24 24,24 24,-10.75 24,-24S37.25,0 24,0z" />
+
+    <!-- Centered full back arrow -->
+    <path
+        android:fillColor="#F5EBE0"
+        android:pathData="M30,23H18.8l4.6-4.6L22,17l-7,7 7,7 1.4-1.4L18.8,25H30v-2z"/>
+</vector>

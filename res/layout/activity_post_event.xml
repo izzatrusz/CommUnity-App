@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F1"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:background="@null"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@id/postEventTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/postEventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/post_event_title"
+            android:textSize="24sp"
+            android:textColor="#4E342E"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/eventTitleInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_title_hint"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            app:layout_constraintTop_toBottomOf="@id/postEventTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/eventDateInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_date_hint"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            app:layout_constraintTop_toBottomOf="@id/eventTitleInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/eventLocationInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_location_hint"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            app:layout_constraintTop_toBottomOf="@id/eventDateInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/eventDescriptionInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_description_hint"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            app:layout_constraintTop_toBottomOf="@id/eventLocationInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <Spinner
+            android:id="@+id/eventCategorySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/eventDescriptionInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/createEventButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/create_event_button"
+            android:backgroundTint="#8D6E63"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@id/eventCategorySpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

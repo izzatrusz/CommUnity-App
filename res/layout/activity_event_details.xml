@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F1"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_event"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/event_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#4E342E"
+            app:layout_constraintTop_toBottomOf="@id/eventImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/eventDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/event_date_time"
+            android:textColor="#3E2723"
+            app:layout_constraintTop_toBottomOf="@id/eventTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/eventLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/event_location"
+            android:textColor="#3E2723"
+            app:layout_constraintTop_toBottomOf="@id/eventDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/eventCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/event_category"
+            android:textColor="#3E2723"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/eventLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/eventDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/event_description"
+            android:textColor="#3E2723"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/eventCategory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/eventDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <!-- Action Button (Join or Manage) -->
+            <Button
+                android:id="@+id/actionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join Event"
+                android:backgroundTint="#8D6E63"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toEndOf="@id/backButton"
+                app:layout_constraintEnd_toStartOf="@+id/deleteEventButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="8dp"/>
+
+            <Button
+                android:id="@+id/deleteEventButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete Event"
+                android:backgroundTint="#FF7043"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toEndOf="@id/actionButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="8dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
